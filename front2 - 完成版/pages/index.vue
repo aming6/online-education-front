@@ -132,6 +132,14 @@ export default {
           prevEl: '.swiper-button-prev'//前一页dom节点
         }
       },
+      computed:{
+        swiper(){
+          return this.$refs.mySwiper.swiper
+        }
+      },
+      mounted(){
+          this.swiper.slideTo(3,1000,false)
+      },
       //banner数组
       bannerList:[],
       eduList:[],
